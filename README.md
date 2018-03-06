@@ -1,6 +1,6 @@
 # vue-twoway-data-binding
 
-实现简单的vue双向数据绑定
+实现简单的vue双向数据绑定  
 ![效果图](https://github.com/BuggMaker/vue-twoway-data-binding/blob/master/resources/img/animate.gif)
 
 ## 基本原理
