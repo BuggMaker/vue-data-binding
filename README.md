@@ -4,7 +4,7 @@ vue双向数据绑定原理
 - 首先看原理图如下  
 ![MVVM框架数据双向绑定原理图](https://github.com/BuggMaker/vue-twoway-data-binding/blob/master/resources/img/data-binding.png)
 - 其中主要部分及其功能
-    1. 
+ 1. 
 - 基本步骤如下
     1. Vue包括data和template两部分,分别对应Model与View
     2. 通过observe为data的每一个属性和其子属性添加`getter`和`setter`
