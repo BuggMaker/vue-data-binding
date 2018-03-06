@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <script src='../dist/data-binding.js'></script>
+</head>
+
+<body>
+    <div>
+        <input id='txt' type="text" />
+        <label id='lbTxt'></label>
+    </div>
+    <script>
+        window.onload = function () {
+            let model = {
+                name: "Xiao Wang",
+                age: 23,
+                detailInfo: {
+                    height: '184cm',
+                    weight: '75kg'
+                }
+            };
+
+
+            let oTxt = document.getElementById('txt'),
+                oLbTxt = document.getElementById('lbTxt')
+
+            model = {
+                txt: 'Hello World!'
+            }
+            D.observe(model);
+            oTxt.oninput = oTxt.onchange = function (e) {
+                model.txt = e.target.value
+            }
+
+            oTxt.value = model.txt
+            oLbTxt.innerText = oTxt.value
+
+            let watcer = new D.Watcher(model, 'txt', function (n, o) {
+                oLbTxt.innerText = 'lb:' + n
+                console.log(`value changed:${o}-->${n}`)
+            })
+
+
+
+        }
+    </script>
+</body>
+
+</html>

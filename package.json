@@ -1,0 +1,21 @@
+{
+  "name": "data-binding",
+  "version": "1.0.0",
+  "description": "Two-way Data Binding",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "BuggMaker",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "clean-webpack-plugin": "^0.1.17",
+    "file-loader": "^1.1.6",
+    "webpack": "^3.11.0"
+  }
+}
