@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='../dist/data-binding.js'></script>
+</head>
+
+<body>
+    <div id='wu-app'>
+        <input type="text" v-model='text'>
+        <br>
+        <label for="">Input value:{{text}}</label>
+        <br>
+        <input type="button" v-on:click='btnClick' value='Click Me'>
+    </div>
+    <script>
+        window.onload = function () {
+            var app = new W.Wu({
+                el: '#wu-app',
+                data: {
+                    text: 'Hello World!'
+                },
+                methods: {
+                    btnClick(e) {
+                        this.text = 'You clicked the button!'
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>

@@ -23,7 +23,7 @@ Watcher.prototype = {
       newVal = this.vm[this.exp];
     if (oldVal !== newVal) {
       this.value = newVal;
-      this.cb.call(this.vm, newVal, oldVal);
+      this.cb(newVal, oldVal);
     }
   }
 };

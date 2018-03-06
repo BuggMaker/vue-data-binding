@@ -32,7 +32,7 @@
             model = {
                 txt: 'Hello World!'
             }
-            D.observe(model);
+            W.observe(model);
             oTxt.oninput = oTxt.onchange = function (e) {
                 model.txt = e.target.value
             }
@@ -40,12 +40,18 @@
             oTxt.value = model.txt
             oLbTxt.innerText = oTxt.value
 
-            let watcer = new D.Watcher(model, 'txt', function (n, o) {
+            let watcer = new W.Watcher(model, 'txt', function (n, o) {
                 oLbTxt.innerText = 'lb:' + n
                 console.log(`value changed:${o}-->${n}`)
             })
 
 
+            var str = 'v-on:click'
+            console.log(str.split(/v-|:|@/).join(''))
+
+            str = `{{p.name + '1'}}`
+            let reg = /\{\{(.*)\}\}/
+            console.log(reg.exec(str)[1])
 
         }
     </script>

@@ -11,8 +11,8 @@ module.exports = {
     //打包后文件输出
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: 'data-binding.js',//'[name].aiMap.js'
-        library:'D'
+        filename: 'data-binding.js',
+        library:'W'
     },
     module: {
         rules: [{
